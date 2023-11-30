@@ -1,14 +1,14 @@
-const x = prompt('Enter first number');
-if (!isNaN(x)) {
-    alert("Введено вірно")
+const x = prompt('Введіть перше число');
+if (isNaN(x) || x === null || x.trim() === "") {
+    alert("Введено нечислове значення або скасовано.")
 } else {
-    alert("Введено нечислове значення або скасовано.");
+    alert("Введено вірно.");
 }
-const y = prompt('Enter second number');
-if (!isNaN(y)) {
-    alert("Введено вірно")
+const y = prompt('Введіть друге число');
+if (isNaN(y) || y === null || y.trim() === "") {
+    alert("Введено нечислове значення або скасовано.")
 } else {
-    alert("Введено нечислове значення або скасовано.");
+    alert("Введено вірно");
 }
 if (x == y) {
     alert('true')
