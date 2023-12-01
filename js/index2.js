@@ -1,19 +1,23 @@
-const x = prompt('Введіть перше число');
-if (isNaN(x) || x === null || x.trim() === "") {
+const xString = prompt('Введіть перше число');
+const x = Number(xString);
+const yString = prompt('Введіть друге число');
+const y = Number(yString);
+if (isNaN(x) || isNaN(y)) {
     alert("Введено нечислове значення або скасовано.")
-} else {
-    alert("Введено вірно.");
-}
-const y = prompt('Введіть друге число');
-if (isNaN(y) || y === null || y.trim() === "") {
-    alert("Введено нечислове значення або скасовано.")
-} else {
-    alert("Введено вірно");
-}
-if (x == y) {
-    alert('true')
 }
 else {
-    alert('false')
+    if (Number.parseFloat(x) && Number.parseFloat(y) && xString?.trim() && yString?.trim()) {
+        if (x === y) {
+            alert("true")
+        }
+        else {
+            alert("false")
+        }
+    }
+    else {
+        alert("Введено нечислове значення або скасовано.")
+    }
 }
+
+
 
